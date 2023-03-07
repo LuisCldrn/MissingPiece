@@ -1,0 +1,51 @@
+
+.img-container {
+    display: grid;
+    grid-template-areas: "1 1";
+    justify-content: center;
+    gap: 1vw;
+    margin: 1.5vw;
+    padding: 2vw;
+    background-color: rgb(198, 199, 186);
+    border-radius: 1vw;
+}
+
+.img-container img {
+    max-width: 65vw;
+    max-height: 70vh;
+}
+
+.btn-close {
+    position: absolute;
+    right: 5vw;
+
+}
+
+.img-info {
+    width: 25vw;
+}
+
+.img-container button {
+    padding: 0.5vw 1vw;
+}
+
+button:nth-child(2) {
+    position: absolute;
+    right: 5vw;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    text-decoration: none;
+    background-color: rgb(49, 78, 95);
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}

@@ -1,0 +1,51 @@
+.main_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6ddd0;;
+    border-radius: 3%;
+    margin:  0 16vw;
+    padding: 5vw 0;
+    width: 70vw;
+    height: 40vh;
+}
+
+.field {
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+
+form, .field {
+    max-width: 1000px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding-right: 1vw;
+}
+
+.contactme_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    display: grid;
+    place-content: center;
+}
+
+#sub-btn {
+    width: 8vw;
+    height: 3vh;
+}

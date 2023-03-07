@@ -1,0 +1,15 @@
+<div class="img-container">
+    <img src="{{this.currentImg.url}}" alt="">
+    <div class="img-info">
+        <p>Location: {{this.currentImg.location}}</p>
+        <p>Name: {{this.currentImg.name}}</p>
+        <p>Category: {{this.currentImg.category}}</p>
+        <p>Description: {{this.currentImg.description}}</p>
+        <p>Camera: {{this.currentImg.cameraInfo}}</p>
+    </div>
+    <button class="btn-close"><a routerLink="/collections" >X</a></button>
+    <div class="navigation">
+        <button (click)="goPrev(currentImg.id)"><a>Previous</a></button>
+        <button (click)="goNext(currentImg.id)"><a>Next</a></button>
+    </div>
+</div>

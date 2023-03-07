@@ -1,0 +1,6 @@
+<div class="img-container">
+    <img src={{ImgUrl}} alt="">
+</div>
+<div style="text-align:center">
+    <span class="dot {{dot.classes}}" *ngFor="let dot of this.Dots" (click)="UpdateDot(dot.id)" ></span>
+</div>

@@ -1,0 +1,23 @@
+<div class="collection">
+    <h1>LandScapes</h1>
+    <div class="images">
+        <img class="imgs" *ngFor="let Img of this.getImages.LandImgs" (click)="expandImg(Img.id)" src="{{Img.url}}" alt="">
+    </div>
+</div>
+<div class="img-container" ngClass="{{display}}">
+    <div class="img">
+        <a class="close" (click)="closeImg()" ><img src="https://i.imgur.com/8lBQDDk.png" alt="close"></a>
+        <img id="displayedImg" src="{{this.currentImg.url}}" (click)="closeImg()" alt="">
+    </div>
+    <div class="img-info">
+        <p>Location: {{this.currentImg.location}}</p>
+        <p>Name: {{this.currentImg.name}}</p>
+        <p>Category: {{this.currentImg.category}}</p>
+        <p>Description: {{this.currentImg.description}}</p>
+        <p>Camera: {{this.currentImg.cameraInfo}}</p>
+    </div>
+    <div class="navigation" >
+        <button id="prevbtn" (click)="goPrev(currentImg.id)"><a>Previous</a></button>
+        <button id="nextbtn" (click)="goNext(currentImg.id)"><a>Next</a></button>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.footer_links img{
+    width: 2vw;
+}
+
+.footer_section {
+    list-style: none;
+    display: grid;
+    place-content: center;
+    grid-template-areas: "1 1 1";
+    gap: 1vw;
+    padding: 0;
+}
+
+.main_content {
+    display: grid;
+    place-content: center;
+}
