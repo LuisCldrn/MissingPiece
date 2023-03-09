@@ -7,10 +7,17 @@
 
 <div class="services">
     <h1>SERVICES</h1>
+    <h4>Click to see my Collections</h4>
     <ul>
         <li (click)="router.navigate(['collections'])" id="lands" >LANDSCAPE</li>
         <li (click)="router.navigate(['collections'])" id="portr" >PORTRAITS</li>
         <li (click)="router.navigate(['collections'])" id="arch" >ARCHITECTURE</li>
         <li (click)="router.navigate(['contactMe'])" >CINEMOTOGRAPHY</li>
     </ul>
+</div>
+
+<div class="further">
+    <h1>I would love to hear from you!</h1>
+    <h2>Reach out to me if you have any unanswered question</h2>
+    <button><a routerLink="/contactMe" >ASK ME!</a></button>
 </div>
