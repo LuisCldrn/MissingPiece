@@ -36,17 +36,74 @@ div {
     justify-content: center;
     align-items: center;
     grid-template-areas: "1 1 1 1";
-    gap: 1vw;
+    gap: 2vw;
     padding: 0;
 }
 
+.services h1 {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+}
+
+.services li {
+    color: rgb(255, 248, 234);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
 .services ul li {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    background-color: blue;
-    height: 15vh;
-    width: 15vh;
+    height: 20vw;
+    width: 20vw;
+    max-width: 250px;
+    max-height: 250px;
     border-radius: 50%;
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+}
+
+.services ul li:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301) 100%, rgba(0, 0, 0, 0.397) 0%), url(https://i.imgur.com/UKN1gBi.jpg);
+}
+
+.services ul li:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301) 100%, rgba(0, 0, 0, 0.397) 0%), url(https://i.imgur.com/KvYHAXg.png);
+}
+
+.services ul li:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301) 100%, rgba(0, 0, 0, 0.397) 0%), url(https://i.imgur.com/mde9BOy.jpg);
+}
+
+.services ul li:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301) 100%, rgba(0, 0, 0, 0.397) 0%), url(https://i.imgur.com/ewpzvw1.jpg);
+}
+
+.services ul li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.4s;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .services ul {
+        grid-template-areas: "1 1";
+        gap: 3vw;
+    }
+
+    .services ul li {
+        width: 25vw;
+        height: 25vw;
+        min-width: 175px;
+        min-height: 175px;
+    }
+
+    .img-container img {
+        width: 90vw;
+    }
 }

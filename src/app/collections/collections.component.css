@@ -42,12 +42,12 @@
 
 .active img {
     max-height: 80vh;
-    max-width: 80vw;
+    max-width: 100%;
     
 }
 
 .img-info {
-    color: white
+    color: rgba(255, 255, 255, 0.637)
 }
 
 .img-info p {
@@ -58,6 +58,16 @@
 .navigation button {
     position: fixed;
     top: 50vh;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.navigation button:hover {
+    cursor: pointer;
+}
+
+.navigation img {
+    width: 3vw;
 }
 
 #prevbtn {
@@ -72,11 +82,70 @@
 .close {
     position: relative;
     bottom: 93%;
-    color: white;
+    color: rgb(255, 255, 255);
     left: 3vw;
     font-size: 1.5rem;
 }
 
 .close img {
     width: 2.5vw;
+}
+
+.collection h1 {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3vw;
+}
+
+@media only screen and (max-width: 960px) {
+    .imgs {
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+
+    .images {
+        width: auto;
+    }
+
+    .imgs:hover{
+        transform: scale(1.01);
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .navigation button {
+        position: fixed;
+        top: 90vh;
+    }
+
+    .active img {
+        max-width: 100%;
+    }
+
+    .img-info {
+        width: 80vw;
+        max-width: 550px;
+    }
+
+    .img a {
+        position: fixed;
+        top: 15vw;
+    }
+
+    .close img {
+        width: 5vw;
+        min-width: 40px;
+    }
+    .img {
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navigation img {
+        width: 5vw;
+    }
 }

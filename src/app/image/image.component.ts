@@ -28,24 +28,24 @@ export class ImageComponent implements OnInit {
 
   setImage() {
     this.id = this.route.snapshot.params['id'] - 1;
-    this.currentImg = this.getImages.LandImgs[this.id];
+    this.currentImg = this.getImages.AllImgs[this.id];
   }
 
 
   goNext(id: number){
-    if(id>=this.getImages.LandImgs.length){id=1;}
+    if(id>=this.getImages.AllImgs.length){id=1;}
     else{console.log(id++)};
     console.log('gonextran');
-    this.currentImg = this.getImages.LandImgs[id-1];
+    this.currentImg = this.getImages.AllImgs[id-1];
     this.router.navigate(['/image/', id]);
   }
 
   goPrev(id: number){
     console.log(id)
-    if(id===1){id=this.getImages.LandImgs.length;}
+    if(id===1){id=this.getImages.AllImgs.length;}
     else{console.log(id--)};
     console.log('gonextran');
-    this.currentImg = this.getImages.LandImgs[id-1];
+    this.currentImg = this.getImages.AllImgs[id-1];
     this.router.navigate(['/image/', id]);
   }
 

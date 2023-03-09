@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GetImagesService, Img } from '../service/get-images.service';
@@ -13,22 +14,28 @@ export class CollectionsComponent implements OnInit {
   nextImg: number = 1
   previousImg: number = 1
   display: string = 'nonActive';
-
+  LandImgs: Img[] = this.getImages.AllImgs.filter(t => t.category === 'wildlife');
+  PortImgs: Img[] = this.getImages.AllImgs.filter(t => t.category === 'PORTRAITS');
+  ArchImgs: Img[] = this.getImages.AllImgs.filter(t => t.category === 'ARCHITECTURE');
   constructor(
     public getImages: GetImagesService,
     private router : Router,
     private elRef: ElementRef,
+    private scroller: ViewportScroller,
   ){
 
   }
 
+  goTo(location: string) {
+    this.router.navigate(['collections']);
+
+  }
+  
   ngOnInit() {
-    this.elRef.nativeElement.offsetLeft
-    console.log(this.elRef.nativeElement.offsetLeft)
   }
 
   expandImg(id: number) {
-    this.currentImg = this.getImages.LandImgs[id-1];
+    this.currentImg = this.getImages.AllImgs[id-1];
     this.display = 'active';
   }
 
@@ -36,18 +43,17 @@ export class CollectionsComponent implements OnInit {
     this.display = 'nonActive'
   }
 
-
   goNext(id: number){
-    if(id>=this.getImages.LandImgs.length){id=1;}
+    if(id>=this.getImages.AllImgs.length){id=1;}
     else{id++};
-    this.currentImg = this.getImages.LandImgs[id-1];
+    this.currentImg = this.getImages.AllImgs[id-1];
   }
 
   goPrev(id: number){
     console.log(id)
-    if(id===1){id=this.getImages.LandImgs.length;}
+    if(id===1){id=this.getImages.AllImgs.length;}
     else{id--};
-    this.currentImg = this.getImages.LandImgs[id-1];
+    this.currentImg = this.getImages.AllImgs[id-1];
   }
 
 

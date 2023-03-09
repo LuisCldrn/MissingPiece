@@ -49,3 +49,41 @@ form, .field {
     width: 8vw;
     height: 3vh;
 }
+
+@media only screen and (max-width: 960px) {
+    
+
+    .field {
+        padding-left: 20px;
+    }
+
+    #lnamefield {
+        padding-left: 20px;
+    }
+    input { 
+        width: 90%;
+    }
+
+    #messagebox {
+        width: 90%;
+    }
+
+    #sub-btn {
+        width: 20vw;
+    }
+
+    .name {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5vw;
+    }
+
+    .fields {
+        width: 60vw;
+    }
+
+    .main_form {
+        margin:  auto;
+        height: auto;
+    }
+}

@@ -96,3 +96,91 @@ body {
     color: white;
     font-weight: 900;
 }
+
+@media only screen and (max-width: 960px) {
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar_menu {
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        padding: 0;
+        padding-top: 5vw;
+        height: 50vh;
+        z-index: -1;
+        background: #000000;}
+
+    .navbar_menu.active1 {
+            background: rgb(255, 248, 234);
+            top: 100%;
+            opacity: 1;
+            transition: all 0.5s ease;
+            z-index: 99;
+            height: 40vh;
+            font-size: 1.6rem;
+        
+        }
+    #navbar_logo {
+        padding-left: 10px;
+        font-size: 1.5rem;
+    }
+
+    .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background:  rgb(0, 0, 0);   
+    }
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    #Etsy_button {
+        width: 25vw;
+        height: 4.5vh;
+    }
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active1 .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active1 .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active1 .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .active {
+        background-image: none;
+        transition-duration: 0.3s;
+    }
+
+
+}

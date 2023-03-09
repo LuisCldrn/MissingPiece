@@ -1,7 +1,15 @@
 <div class="collection">
-    <h1>LandScapes</h1>
+    <h1 id="Landscapes">LandScapes</h1>
     <div class="images">
-        <img class="imgs" *ngFor="let Img of this.getImages.LandImgs" (click)="expandImg(Img.id)" src="{{Img.url}}" alt="">
+        <img class="imgs" *ngFor="let Img of this.LandImgs" (click)="expandImg(Img.id)" src="{{Img.url}}" alt="">
+    </div>
+    <h1 id="portraits" >Portraits</h1>
+    <div class="images">
+        <img class="imgs" *ngFor="let Img of this.PortImgs" (click)="expandImg(Img.id)" src="{{Img.url}}" alt="">
+    </div>
+    <h1 id="architecture" >Architecture</h1>
+    <div class="images">
+        <img class="imgs" *ngFor="let Img of this.ArchImgs" (click)="expandImg(Img.id)" src="{{Img.url}}" alt="">
     </div>
 </div>
 <div class="img-container" ngClass="{{display}}">
@@ -17,7 +25,7 @@
         <p>Camera: {{this.currentImg.cameraInfo}}</p>
     </div>
     <div class="navigation" >
-        <button id="prevbtn" (click)="goPrev(currentImg.id)"><a>Previous</a></button>
-        <button id="nextbtn" (click)="goNext(currentImg.id)"><a>Next</a></button>
+        <button id="prevbtn" (click)="goPrev(currentImg.id)"><a><img src="https://i.imgur.com/UiF4eIY.png" alt=""></a></button>
+        <button id="nextbtn" (click)="goNext(currentImg.id)"><a><img src="https://i.imgur.com/4Q3KJXo.png" alt=""></a></button>
     </div>
 </div>

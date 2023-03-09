@@ -1,10 +1,12 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Img } from '../service/get-images.service';
 
 export class Dot {
   constructor(
     public id: number,
-    public classes: string
+    public classes: string,
   )
   {}
 }
@@ -17,6 +19,18 @@ export class Dot {
 export class HomeComponent implements OnInit {
 
   myTimer = setInterval(() => this.UpdateImage(1), 3000);
+
+  constructor(
+    private scroller: ViewportScroller,
+    public router : Router,
+  ) {
+
+  }
+
+  goTo(location: string) {
+    this.router.navigate(['collections']);
+    this.scroller.scrollToAnchor(location);
+  }
 
   ngOnInit() {
     this.myTimer
