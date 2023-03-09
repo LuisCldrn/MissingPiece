@@ -1,0 +1,31 @@
+.aboutme img {
+    margin-top: 3vh;
+    width: 60vw;
+    border-radius: 15px;
+}
+
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.written_info {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    text-align: center;
+    gap: 1.5vw;
+}
+
+@media only screen and (max-width: 960px) {
+    .aboutme img {
+        width: 90vw;
+    }
+
+    .written_info {
+        width: 90vw;
+    }
+}
