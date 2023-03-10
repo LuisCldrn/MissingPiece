@@ -51,10 +51,6 @@ export class GetImagesService {
     new Img(29, 'test4', 'ARCHITECTURE', 'https://i.imgur.com/UMKp5t8.jpg', 'chicago', "Hello, this would be where you would add info about the image, not sure if description or just general ideas", '1.2fs wide-lense iphone11'),
     new Img(30, 'test4', 'ARCHITECTURE', 'https://i.imgur.com/mde9BOy.jpg', 'chicago', "Hello, this would be where you would add info about the image, not sure if description or just general ideas", '1.2fs wide-lense iphone11'),
     new Img(31, 'test4', 'ARCHITECTURE', 'https://i.imgur.com/JilxiMw.jpg', 'chicago', "Hello, this would be where you would add info about the image, not sure if description or just general ideas", '1.2fs wide-lense iphone11'),
-
-
-
-
   ]
 
   constructor() { }
